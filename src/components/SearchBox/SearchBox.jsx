@@ -8,22 +8,21 @@ import css from "./SearchBox.module.css";
 const SearchBox = () => {
   const dispatch = useDispatch();
 
+  const handleInputChange = (e) => {
+    const value = e.target.value.toLowerCase();
+    if (/\d/.test(value)) {
+      dispatch(setNumberFilterAction(value));
+      dispatch(setNameFilterAction(""));
+    } else {
+      dispatch(setNameFilterAction(value));
+      dispatch(setNumberFilterAction(""));
+    }
+  };
+
   return (
-    <div className={css.filters}>
-      <div className={css.filter}>
-        <span>Find contacts by name</span>
-        <input
-          className={css.input}
-          onChange={(e) => dispatch(setNameFilterAction(e.target.value))}
-        />
-      </div>
-      <div className={css.filter}>
-        <span>Find contacts by number</span>
-        <input
-          className={css.input}
-          onChange={(e) => dispatch(setNumberFilterAction(e.target.value))}
-        />
-      </div>
+    <div className={css.filter}>
+      <span>Find contacts</span>
+      <input className={css.input} onChange={handleInputChange} />
     </div>
   );
 };
