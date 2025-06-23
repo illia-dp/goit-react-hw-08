@@ -1,0 +1,14 @@
+.header {
+  width: 100%;
+  background-color: var(--white-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.appBar {
+  display: flex;
+  justify-content: space-between;
+}

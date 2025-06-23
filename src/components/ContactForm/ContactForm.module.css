@@ -1,0 +1,40 @@
+.form {
+  max-width: 400px;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.input {
+  outline: transparent;
+  border: 1px solid black;
+  border-radius: 4px;
+  height: 35px;
+  padding: 6px 12px;
+}
+
+.input:hover {
+  border-color: var(--hover-color);
+}
+
+.input:focus {
+  border-color: var(--accent-color);
+}
+
+.button {
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.errorMessage {
+  position: absolute;
+  bottom: -23px;
+}

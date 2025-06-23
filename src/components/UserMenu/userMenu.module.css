@@ -1,0 +1,13 @@
+.list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 500;
+  width: 100%;
+}

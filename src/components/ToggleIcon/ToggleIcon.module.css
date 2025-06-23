@@ -1,0 +1,17 @@
+.iconBtn {
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  right: 6%;
+  top: 55%;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.iconBtn:hover {
+  color: var(--hover-color);
+}
+
+.iconBtn:active {
+  color: var(--accent-color);
+}
