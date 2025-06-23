@@ -1,5 +1,5 @@
 import { lazy, useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
@@ -54,6 +54,7 @@ function App() {
               <PrivateRoute redirectTo="/login" component={<ContactsPage />} />
             }
           />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Layout>
     </>
